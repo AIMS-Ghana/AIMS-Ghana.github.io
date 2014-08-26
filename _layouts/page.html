@@ -2,10 +2,36 @@
 <html>
 <head>
   <title>{{ page.title }}</title>
+  <style>
+  .randomize {
+    font-size: 2em;
+    color: white;
+    background-color: black;
+    width: 50%;
+  }
+  .randomize li {
+    display: none;
+    width: auto;
+    padding: 1em;
+  }
+  .randomize li.shown {
+    display: inherit;
+  }
+  </style>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+
 </head>
 <body>
 <div class="main">
 {{ content }}
 </div>
+<script>
+$(".randomize").click(function(e) {
+  var $lis = $(this).children();
+  var min = 0, max = $lis.length - 1;
+  var choice = Math.floor(Math.random()*(max-min+1)+min);
+  $lis.removeClass("shown").slice(choice, choice+1).addClass("shown");
+});
+</script>
 </body>
 </html>

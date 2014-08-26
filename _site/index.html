@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+  <title>AIMS Ghana</title>
+  <style>
+  .randomize {
+    font-size: 2em;
+    color: white;
+    background-color: black;
+    width: 50%;
+  }
+  .randomize li {
+    display: none;
+    width: auto;
+    padding: 1em;
+  }
+  .randomize li.shown {
+    display: inherit;
+  }
+  </style>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+</head>
+<body>
+<div class="main">
+<p>This is a placeholder for potential content for the AIMS Ghana program.
+The current AIMS Ghana site is <a href="www.aims.edu.gh">here</a>.</p>
+
+<p>However, we do have the ice-breakers, random question spinner here:</p>
+
+<ul class="randomize">
+  <li class="shown">What is your favorite food?  Dish, ingredient, etc.</li>
+  <li>How big is your family?  Siblings, parents, children, etc.</li>
+  <li>Where is the farthest you have traveled from home?</li>
+  <li>What is your favorite artist?  Musician, author, actor, painter, etc.</li>
+  <li>What has been your favorite subject other than maths?</li>
+  <li>What is your favorite game?  Sport, videogames, boardgames, etc.</li>
+  <li>Where would you most like to travel?</li>
+  <li>If you could be responsible for some organization, what would be? Business, charity,
+  academic, religious, governmental, etc.</li>
+  <li>What is your favorite natural thing?  Animal, plant, particular environment, etc.</li>
+  <li>How did you first get into mathematics?</li>
+</ul>
+
+</div>
+<script>
+$(".randomize").click(function(e) {
+  var $lis = $(this).children();
+  var min = 0, max = $lis.length - 1;
+  var choice = Math.floor(Math.random()*(max-min+1)+min);
+  $lis.removeClass("shown").slice(choice, choice+1).addClass("shown");
+});
+</script>
+</body>
+</html>
