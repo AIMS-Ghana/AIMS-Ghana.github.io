@@ -48,7 +48,7 @@ $(".randomize").click(function(e) {
   var $lis = $(this).children();
   var min = 0, max = $lis.length - 1;
   var choice = Math.floor(Math.random()*(max-min+1)+min);
-  $lis.removeClass("shown").slice(choice, choice+1).addClass("shown");
+  $lis.removeClass("shown").eq(choice).addClass("shown");
 });
 </script>
 </body>
