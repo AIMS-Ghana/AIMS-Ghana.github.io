@@ -2,7 +2,7 @@
 title: AIMS Ghana
 layout: page
 ---
-![AIMS Ghana Logo]({{ site.baseurl }}logo.png "AIMS Ghana Logo")
+![AIMS Ghana Logo]({{ site.baseurl }}/logo.png "AIMS Ghana Logo")
 
 This is a placeholder for potential content for the AIMS Ghana program.
 The current AIMS Ghana site is [here](www.aims.edu.gh).
